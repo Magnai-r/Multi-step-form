@@ -1,7 +1,12 @@
 import { Footer } from "../constant";
 import { FormInput } from "../constant/FormInput";
 
-export const SecondStep = ({ handleInput, stepCount, handleSubmit }) => {
+export const SecondStep = ({
+  handleInput,
+  stepCount,
+  handleSubmit,
+  handlePreviousStep,
+}) => {
   return (
     <form
       className="flex flex-col gap-3 justify-between h-full w-full"
@@ -45,7 +50,7 @@ export const SecondStep = ({ handleInput, stepCount, handleSubmit }) => {
           handleInput={handleInput}
         />
       </div>
-      <Footer stepCount={stepCount} />
+      <Footer stepCount={stepCount} handlePrevious={handlePreviousStep} />
     </form>
   );
 };
